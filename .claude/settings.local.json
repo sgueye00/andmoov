@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\Users\\SGUEYE\\Downloads\")",
+      "Bash(copy \"C:\\Users\\SGUEYE\\Downloads\\Capture d''écran 2025-11-16 043401.png\" \"C:\\dev\\forge\\workspaces_front\\andmoov-demo\\design-reference.png\")",
+      "Bash(dir \"C:\\dev\\forge\\workspaces_front\\andmoov-demo\\plats\" /B)",
+      "Bash(copy \"C:\\dev\\forge\\workspaces_front\\andmoov-demo\\plats\\*.*\" \"C:\\dev\\forge\\workspaces_front\\andmoov-demo\\public\\images\\plats\"\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
