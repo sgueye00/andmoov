@@ -21,21 +21,83 @@ function App() {
         {/* Landing Page - Page de présentation pour investisseurs */}
         <Route path="/" element={<LandingPage />} />
 
-        {/* Application Mobile - Routes avec MobileFrame */}
-        <Route path="/app/*" element={
+        {/* Application Mobile - Routes directes (backward compatible) */}
+        <Route path="/app" element={
           <CartProvider>
             <MobileFrame>
-              <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/course" element={<Course />} />
-                <Route path="/colis" element={<Colis />} />
-                <Route path="/resto" element={<Resto />} />
-                <Route path="/resto/:id" element={<RestaurantDetail />} />
-                <Route path="/panier" element={<Panier />} />
-                <Route path="/commandes" element={<Commandes />} />
-                <Route path="/compte" element={<Compte />} />
-                <Route path="/business" element={<Business />} />
-              </Routes>
+              <Dashboard />
+              <FloatingCartButton />
+            </MobileFrame>
+          </CartProvider>
+        } />
+
+        <Route path="/course" element={
+          <CartProvider>
+            <MobileFrame>
+              <Course />
+              <FloatingCartButton />
+            </MobileFrame>
+          </CartProvider>
+        } />
+
+        <Route path="/colis" element={
+          <CartProvider>
+            <MobileFrame>
+              <Colis />
+              <FloatingCartButton />
+            </MobileFrame>
+          </CartProvider>
+        } />
+
+        <Route path="/resto" element={
+          <CartProvider>
+            <MobileFrame>
+              <Resto />
+              <FloatingCartButton />
+            </MobileFrame>
+          </CartProvider>
+        } />
+
+        <Route path="/resto/:id" element={
+          <CartProvider>
+            <MobileFrame>
+              <RestaurantDetail />
+              <FloatingCartButton />
+            </MobileFrame>
+          </CartProvider>
+        } />
+
+        <Route path="/panier" element={
+          <CartProvider>
+            <MobileFrame>
+              <Panier />
+              <FloatingCartButton />
+            </MobileFrame>
+          </CartProvider>
+        } />
+
+        <Route path="/commandes" element={
+          <CartProvider>
+            <MobileFrame>
+              <Commandes />
+              <FloatingCartButton />
+            </MobileFrame>
+          </CartProvider>
+        } />
+
+        <Route path="/compte" element={
+          <CartProvider>
+            <MobileFrame>
+              <Compte />
+              <FloatingCartButton />
+            </MobileFrame>
+          </CartProvider>
+        } />
+
+        <Route path="/business" element={
+          <CartProvider>
+            <MobileFrame>
+              <Business />
               <FloatingCartButton />
             </MobileFrame>
           </CartProvider>
