@@ -24,7 +24,7 @@ function LandingPage() {
             </button>
             <button
               className="cta-button"
-              style={{ background: '#51B8EC', color: 'white' }}
+              style={{ background: 'white', color: '#9333EA', border: '2px solid #9333EA' }}
               onClick={() => navigate('/business')}
             >
               Espace Professionnel
@@ -50,7 +50,7 @@ function LandingPage() {
                 <Package className="w-14 h-14 text-green-600 mx-auto" />
               </div>
               <h3>AndMoov Colis</h3>
-              <p>Envoyez vos colis dès 500 F ! Point relais (500-1000 F) ou livraison domicile (1500-2500 F). Le destinataire reçoit TOUJOURS gratuitement. Point relais moins cher grâce à l'envoi groupé.</p>
+              <p>Envoyez vos colis ! Point relais ou livraison domicile. Le destinataire reçoit TOUJOURS gratuitement. Point relais moins cher grâce à l'envoi groupé.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
@@ -61,7 +61,7 @@ function LandingPage() {
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <Briefcase className="w-14 h-14 mx-auto" style={{ color: '#51B8EC' }} />
+                <Briefcase className="w-14 h-14 mx-auto" style={{ color: '#9333EA' }} />
               </div>
               <h3>AndMoov Business</h3>
               <p>Solutions complètes pour restaurateurs, commerçants, chauffeurs et livreurs. Intégration e-commerce clé en main.</p>
@@ -77,12 +77,12 @@ function LandingPage() {
           <div className="innovation-content">
             <p className="innovation-text">
               AndMoov révolutionne la livraison de colis à Dakar ! L'expéditeur paie l'envoi, le destinataire reçoit <strong>TOUJOURS gratuitement</strong>.
-              Le <strong>Point Relais économique</strong> (500-1000 F) profite de l'envoi groupé pour un tarif jusqu'à 3× moins cher que la livraison domicile (1500-2500 F).
+              Le <strong>Point Relais économique</strong> profite de l'envoi groupé pour un tarif jusqu'à 3× moins cher que la livraison domicile.
               Bénéfique pour tous et soutient les commerces locaux.
             </p>
             <div className="innovation-benefits">
               <div className="benefit">✅ Destinataire reçoit 100% gratuit</div>
-              <div className="benefit">✅ Point Relais dès 500 F (envoi groupé)</div>
+              <div className="benefit">✅ Point Relais économique (envoi groupé)</div>
               <div className="benefit">✅ Réseau de 50+ commerces de proximité</div>
               <div className="benefit">✅ Flexibilité horaire (8h-20h, 7j/7)</div>
               <div className="benefit">✅ 3× moins cher que DHL/Poste</div>
@@ -127,7 +127,7 @@ function LandingPage() {
             </button>
             <button
               className="cta-button-large"
-              style={{ background: '#51B8EC' }}
+              style={{ background: 'white', color: '#9333EA', border: '2px solid #9333EA' }}
               onClick={() => navigate('/business')}
             >
               Rejoindre Andmoov Business

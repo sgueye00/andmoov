@@ -125,39 +125,39 @@ const CoursierDashboard = () => {
 
       <div className="max-w-6xl mx-auto px-6 py-6 space-y-6">
         {/* Stats Cards */}
-        <div className="grid grid-cols-4 gap-4">
-          <div className="bg-white rounded-xl p-4 border border-purple-200">
+        <div className="grid grid-cols-4 gap-3">
+          <div className="bg-white rounded-xl p-3 border border-purple-200">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-500">Aujourd'hui</span>
-              <DollarSign className="w-4 h-4 text-purple-600" />
+              <span className="text-xs text-gray-500">Aujourd'hui</span>
+              <DollarSign className="w-4 h-4 text-purple-600 flex-shrink-0" />
             </div>
-            <div className="text-2xl font-bold text-gray-900">{stats.aujourdhui.toLocaleString()} F</div>
-            <div className="text-sm text-gray-500 mt-1">{stats.coursesAujourdhui} courses</div>
+            <div className="text-xl font-bold text-gray-900 truncate">{stats.aujourdhui.toLocaleString()} F</div>
+            <div className="text-xs text-gray-500 mt-1">{stats.coursesAujourdhui} courses</div>
           </div>
 
-          <div className="bg-white rounded-xl p-4 border border-purple-200">
+          <div className="bg-white rounded-xl p-3 border border-purple-200">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-500">Cette semaine</span>
-              <TrendingUp className="w-4 h-4 text-purple-600" />
+              <span className="text-xs text-gray-500">Semaine</span>
+              <TrendingUp className="w-4 h-4 text-purple-600 flex-shrink-0" />
             </div>
-            <div className="text-2xl font-bold text-gray-900">{stats.semaine.toLocaleString()} F</div>
+            <div className="text-xl font-bold text-gray-900 truncate">{stats.semaine.toLocaleString()} F</div>
           </div>
 
-          <div className="bg-white rounded-xl p-4 border border-purple-200">
+          <div className="bg-white rounded-xl p-3 border border-purple-200">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-500">Ce mois</span>
-              <Package className="w-4 h-4 text-purple-600" />
+              <span className="text-xs text-gray-500">Mois</span>
+              <Package className="w-4 h-4 text-purple-600 flex-shrink-0" />
             </div>
-            <div className="text-2xl font-bold text-gray-900">{stats.mois.toLocaleString()} F</div>
+            <div className="text-xl font-bold text-gray-900 truncate">{stats.mois.toLocaleString()} F</div>
           </div>
 
-          <div className="bg-white rounded-xl p-4 border border-purple-200">
+          <div className="bg-white rounded-xl p-3 border border-purple-200">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-500">Note</span>
-              <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+              <span className="text-xs text-gray-500">Note</span>
+              <Star className="w-4 h-4 text-yellow-500 fill-yellow-500 flex-shrink-0" />
             </div>
-            <div className="text-2xl font-bold text-gray-900">{stats.note}/5</div>
-            <div className="text-sm text-gray-500 mt-1">{stats.totalCourses} courses</div>
+            <div className="text-xl font-bold text-gray-900">{stats.note}/5</div>
+            <div className="text-xs text-gray-500 mt-1">{stats.totalCourses} courses</div>
           </div>
         </div>
 

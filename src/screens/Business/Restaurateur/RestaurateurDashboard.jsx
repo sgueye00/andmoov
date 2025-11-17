@@ -30,14 +30,14 @@ const RestaurateurDashboard = () => {
       <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
         <div className="px-6 pt-6 pb-20 space-y-5">
           {/* Stats Header */}
-          <div className="bg-purple-600 rounded-xl p-5 text-white">
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <p className="text-purple-50 text-sm">Ventes aujourd'hui</p>
-                <p className="text-3xl font-bold">{stats.aujourdhui.toLocaleString()} F</p>
-                <p className="text-xs text-purple-50 mt-1">{stats.commandesAujourdhui} commandes</p>
+          <div className="bg-purple-600 rounded-xl p-4 text-white">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex-1 min-w-0">
+                <p className="text-purple-50 text-xs">Aujourd'hui</p>
+                <p className="text-2xl font-bold truncate">{stats.aujourdhui.toLocaleString()} F</p>
+                <p className="text-xs text-purple-50 mt-0.5">{stats.commandesAujourdhui} commandes</p>
               </div>
-              <UtensilsCrossed className="w-12 h-12 opacity-80" />
+              <UtensilsCrossed className="w-10 h-10 opacity-80 flex-shrink-0 ml-2" />
             </div>
 
             {/* Toggle Restaurant ouvert */}
