@@ -25,7 +25,7 @@ function LandingPage() {
               App Client
             </button>
             <button
-              className="bg-white text-blue-600 border-none px-12 py-4 text-lg font-bold rounded-lg cursor-pointer transition-all shadow-sm hover:bg-gray-100 hover:shadow-md"
+              className="bg-purple-600 text-white border-none px-12 py-4 text-lg font-bold rounded-lg cursor-pointer transition-all shadow-sm hover:bg-purple-700 hover:shadow-md"
               onClick={() => navigate('/business')}
             >
               Espace Professionnel
@@ -62,7 +62,7 @@ function LandingPage() {
             </div>
             <div className="bg-white p-10 rounded-lg shadow-sm transition-all hover:shadow-md">
               <div className="mb-6">
-                <Briefcase className="w-14 h-14 text-blue-600 mx-auto" />
+                <Briefcase className="w-14 h-14 text-purple-600 mx-auto" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-900">AndMoov Business</h3>
               <p className="text-gray-600 leading-relaxed">Solutions complètes pour restaurateurs, commerçants, chauffeurs et livreurs.</p>
