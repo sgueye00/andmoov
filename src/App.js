@@ -107,13 +107,49 @@ function App() {
           </CartProvider>
         } />
 
-        {/* Andmoov Business - Écrans professionnels (SANS MobileFrame) */}
-        <Route path="/business" element={<BusinessHome />} />
-        <Route path="/business/coursier" element={<CoursierDashboard />} />
-        <Route path="/business/chauffeur" element={<CoursierDashboard />} />
-        <Route path="/business/restaurateur" element={<CoursierDashboard />} />
-        <Route path="/business/point-relais" element={<CoursierDashboard />} />
-        <Route path="/business/expediteur" element={<CoursierDashboard />} />
+        {/* Andmoov Business - Écrans professionnels (format mobile avec MobileFrame) */}
+        <Route path="/business" element={
+          <CartProvider>
+            <MobileFrame>
+              <BusinessHome />
+            </MobileFrame>
+          </CartProvider>
+        } />
+        <Route path="/business/coursier" element={
+          <CartProvider>
+            <MobileFrame>
+              <CoursierDashboard />
+            </MobileFrame>
+          </CartProvider>
+        } />
+        <Route path="/business/chauffeur" element={
+          <CartProvider>
+            <MobileFrame>
+              <CoursierDashboard />
+            </MobileFrame>
+          </CartProvider>
+        } />
+        <Route path="/business/restaurateur" element={
+          <CartProvider>
+            <MobileFrame>
+              <CoursierDashboard />
+            </MobileFrame>
+          </CartProvider>
+        } />
+        <Route path="/business/point-relais" element={
+          <CartProvider>
+            <MobileFrame>
+              <CoursierDashboard />
+            </MobileFrame>
+          </CartProvider>
+        } />
+        <Route path="/business/expediteur" element={
+          <CartProvider>
+            <MobileFrame>
+              <CoursierDashboard />
+            </MobileFrame>
+          </CartProvider>
+        } />
       </Routes>
     </Router>
   );

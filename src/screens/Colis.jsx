@@ -78,7 +78,11 @@ const Colis = () => {
                 </div>
                 <div className="flex items-center gap-2 text-xs">
                   <span className="text-green-700">📦 Destinataire :</span>
-                  <span className="font-semibold text-green-900">Récupère GRATUITEMENT</span>
+                  <span className="font-semibold text-green-900">Reçoit TOUJOURS GRATUITEMENT</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs mt-1">
+                  <span className="text-green-700">✨ Point Relais :</span>
+                  <span className="font-medium text-green-800">Moins cher grâce à l'envoi groupé</span>
                 </div>
               </div>
             </div>
@@ -167,7 +171,12 @@ const Colis = () => {
                       <p className="text-xs opacity-60">Délai : {m.delai}</p>
                       {m.name === 'Relais' && (
                         <p className="text-xs text-green-600 font-medium mt-1">
-                          ✓ Destinataire récupère gratuitement
+                          ✓ Économique grâce à l'envoi groupé
+                        </p>
+                      )}
+                      {m.name === 'Domicile' && (
+                        <p className="text-xs text-blue-600 font-medium mt-1">
+                          ✓ Destinataire reçoit gratuitement
                         </p>
                       )}
                     </div>
@@ -215,19 +224,17 @@ const Colis = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-green-100">Destinataire paie:</span>
-                <span className="font-semibold text-yellow-300">
-                  {mode === 'Relais' ? '0 F (Gratuit ✓)' : '0 F'}
-                </span>
+                <span className="font-semibold text-yellow-300">0 F (TOUJOURS Gratuit ✓)</span>
               </div>
             </div>
 
-            {mode === 'Relais' && (
-              <div className="bg-yellow-400/20 border border-yellow-300/30 rounded-lg p-2 mb-3">
-                <p className="text-xs text-yellow-100 text-center">
-                  🎉 Le destinataire récupère gratuitement en point relais
-                </p>
-              </div>
-            )}
+            <div className="bg-yellow-400/20 border border-yellow-300/30 rounded-lg p-2 mb-3">
+              <p className="text-xs text-yellow-100 text-center">
+                {mode === 'Relais'
+                  ? '🎉 Point Relais : moins cher grâce à l\'envoi groupé !'
+                  : '🎉 Le destinataire reçoit toujours gratuitement !'}
+              </p>
+            </div>
 
             <button className="w-full bg-white text-green-600 font-semibold py-3 rounded-xl hover:bg-green-50 transition-colors">
               Valider l'envoi - {prixActuel} F

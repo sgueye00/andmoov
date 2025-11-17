@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Bike, Car, UtensilsCrossed, Store, Package, ArrowLeft } from 'lucide-react';
+import { Bike, Car, UtensilsCrossed, Store, Package } from 'lucide-react';
+import Header from '../../components/Header';
 
 const BusinessHome = () => {
   const navigate = useNavigate();
@@ -54,116 +55,119 @@ const BusinessHome = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      {/* Header */}
-      <div className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => navigate('/')}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Andmoov Business</h1>
-              <p className="text-sm text-gray-500">Choisissez votre profil professionnel</p>
-            </div>
-          </div>
-        </div>
+    <div className="h-screen bg-gray-50 flex flex-col">
+      <div className="sticky top-0 z-30">
+        <Header title="Andmoov Business" showBack={true} backTo="/" />
       </div>
 
-      {/* Content */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        {/* Welcome Banner */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 mb-12 text-white">
-          <h2 className="text-3xl font-bold mb-2">Bienvenue sur Andmoov Business 🚀</h2>
-          <p className="text-blue-100 text-lg">
-            Rejoignez notre réseau de professionnels et commencez à gagner de l'argent dès aujourd'hui
-          </p>
-          <div className="grid grid-cols-3 gap-6 mt-8">
-            <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-              <div className="text-3xl font-bold">1,500+</div>
-              <div className="text-sm text-blue-100">Professionnels actifs</div>
-            </div>
-            <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-              <div className="text-3xl font-bold">95%</div>
-              <div className="text-sm text-blue-100">Satisfaction</div>
-            </div>
-            <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-              <div className="text-3xl font-bold">24/7</div>
-              <div className="text-sm text-blue-100">Support dédié</div>
+      <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
+        <div className="px-6 pt-6 pb-20 space-y-6">
+          {/* Welcome Banner */}
+          <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-xl p-5 text-white">
+            <h2 className="text-xl font-bold mb-2">Andmoov Business</h2>
+            <p className="text-orange-50 text-sm mb-4">
+              Rejoignez notre réseau de professionnels et commencez à gagner de l'argent dès aujourd'hui
+            </p>
+            <div className="grid grid-cols-3 gap-3">
+              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                <div className="text-2xl font-bold">1,500+</div>
+                <div className="text-xs text-orange-100">Professionnels</div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                <div className="text-2xl font-bold">95%</div>
+                <div className="text-xs text-orange-100">Satisfaction</div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                <div className="text-2xl font-bold">24/7</div>
+                <div className="text-xs text-orange-100">Support</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Profils Grid */}
-        <h3 className="text-xl font-bold text-gray-900 mb-6">Sélectionnez votre activité</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {profils.map((profil) => {
-            const Icon = profil.icon;
-            return (
-              <button
-                key={profil.id}
-                onClick={() => navigate(profil.route)}
-                className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 text-left border-2 border-transparent hover:border-blue-300"
-              >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${profil.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <Icon className="w-7 h-7 text-white" />
+          {/* Profils Grid */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Sélectionnez votre activité</h3>
+            <div className="space-y-3">
+              {profils.map((profil) => {
+                const Icon = profil.icon;
+                return (
+                  <button
+                    key={profil.id}
+                    onClick={() => navigate(profil.route)}
+                    className="w-full bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:border-orange-300 transition-all text-left"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${profil.gradient} flex items-center justify-center flex-shrink-0`}>
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-gray-900 text-base mb-1">{profil.title}</h4>
+                        <p className="text-gray-600 text-xs mb-1">{profil.description}</p>
+                        <span className={`text-xs font-semibold bg-gradient-to-r ${profil.gradient} bg-clip-text text-transparent`}>
+                          {profil.stats}
+                        </span>
+                      </div>
+                      <span className="text-orange-600 text-xl">→</span>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Features Section */}
+          <div className="space-y-3">
+            <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl">💰</span>
                 </div>
-                <h4 className="font-bold text-gray-900 text-lg mb-2">{profil.title}</h4>
-                <p className="text-gray-600 text-sm mb-3">{profil.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className={`text-sm font-semibold bg-gradient-to-r ${profil.gradient} bg-clip-text text-transparent`}>
-                    {profil.stats}
-                  </span>
-                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+                <div>
+                  <h4 className="font-bold text-gray-900 text-sm mb-1">Revenus attractifs</h4>
+                  <p className="text-gray-600 text-xs">
+                    Commissions compétitives et paiements hebdomadaires via Wave/Orange Money
+                  </p>
                 </div>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Features Section */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">💰</span>
+              </div>
             </div>
-            <h4 className="font-bold text-gray-900 mb-2">Revenus attractifs</h4>
-            <p className="text-gray-600 text-sm">
-              Commissions compétitives et paiements hebdomadaires via Wave/Orange Money
-            </p>
+
+            <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl">📱</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 text-sm mb-1">Interface intuitive</h4>
+                  <p className="text-gray-600 text-xs">
+                    Dashboard professionnel simple et efficace pour gérer votre activité
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl">🤝</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 text-sm mb-1">Support dédié</h4>
+                  <p className="text-gray-600 text-xs">
+                    Équipe support disponible 7j/7 pour vous accompagner dans votre activité
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">📱</span>
-            </div>
-            <h4 className="font-bold text-gray-900 mb-2">Interface intuitive</h4>
-            <p className="text-gray-600 text-sm">
-              Dashboard professionnel simple et efficace pour gérer votre activité
-            </p>
+          {/* CTA */}
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-5 text-center text-white">
+            <h3 className="text-lg font-bold mb-1">Pas encore inscrit ?</h3>
+            <p className="text-gray-300 text-sm mb-4">Rejoignez Andmoov Business en quelques minutes</p>
+            <button className="w-full bg-white text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+              Créer mon compte professionnel
+            </button>
           </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🤝</span>
-            </div>
-            <h4 className="font-bold text-gray-900 mb-2">Support dédié</h4>
-            <p className="text-gray-600 text-sm">
-              Équipe support disponible 7j/7 pour vous accompagner dans votre activité
-            </p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 text-center text-white">
-          <h3 className="text-2xl font-bold mb-2">Pas encore inscrit ?</h3>
-          <p className="text-gray-300 mb-6">Rejoignez Andmoov Business en quelques minutes</p>
-          <button className="bg-white text-gray-900 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">
-            Créer mon compte professionnel
-          </button>
         </div>
       </div>
     </div>
