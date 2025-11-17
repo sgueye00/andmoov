@@ -20,7 +20,7 @@ function LandingPage() {
           <p className="subtitle">La super-app sénégalaise pour vos courses, colis, repas et plus encore</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '24px', flexWrap: 'wrap' }}>
             <button className="cta-button" onClick={handleDiscover}>
-              App Client (Démo)
+              App Client
             </button>
             <button
               className="cta-button"
@@ -126,7 +126,7 @@ function LandingPage() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2025 AndMoov - Made in Dakar, Sénégal 🇸🇳</p>
+          <p>&copy; 2025 AndMoov - Dakar, Sénégal 🇸🇳</p>
           <p className="footer-note">Démo de présentation • Paiement Wave & Orange Money</p>
         </div>
       </footer>
