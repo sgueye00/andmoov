@@ -46,7 +46,7 @@ const Commandes = () => {
         <Header title="Mes Commandes" showBack={false} showNotif={true} />
         {/* Tabs - Sticky sous le header */}
         <div className="bg-gray-50 px-6 py-3">
-          <div className="bg-gray-100 rounded-xl p-1 flex gap-1">
+          <div className="bg-gray-100 rounded-xl p-2 flex gap-2">
             {tabs.map((tab) => (
               <button
                 key={tab}
