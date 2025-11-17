@@ -64,7 +64,7 @@ function LandingPage() {
                 <Briefcase className="w-14 h-14 mx-auto" style={{ color: '#9333EA' }} />
               </div>
               <h3>AndMoov Business</h3>
-              <p>Solutions complètes pour restaurateurs, commerçants, chauffeurs et livreurs. Intégration e-commerce clé en main.</p>
+              <p>Solutions complètes pour restaurateurs, commerçants, chauffeurs et livreurs.</p>
             </div>
           </div>
         </div>
@@ -127,7 +127,6 @@ function LandingPage() {
       <footer className="footer">
         <div className="container">
           <p>&copy; 2025 AndMoov - Dakar, Sénégal 🇸🇳</p>
-          <p className="footer-note">Démo de présentation • Paiement Wave & Orange Money</p>
         </div>
       </footer>
     </div>
