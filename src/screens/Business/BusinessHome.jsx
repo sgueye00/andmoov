@@ -96,18 +96,18 @@ const BusinessHome = () => {
                     onClick={() => navigate(profil.route)}
                     className="w-full bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:border-gray-400 transition-all text-left"
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${profil.gradient} flex items-center justify-center flex-shrink-0`}>
                         <Icon className="w-6 h-6 text-white" />
                       </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-gray-900 text-base mb-1">{profil.title}</h4>
-                        <p className="text-gray-600 text-xs mb-1">{profil.description}</p>
-                        <span className={`text-xs font-semibold bg-gradient-to-r ${profil.gradient} bg-clip-text text-transparent`}>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-bold text-gray-900 text-sm mb-1">{profil.title}</h4>
+                        <p className="text-gray-600 text-xs mb-1 truncate">{profil.description}</p>
+                        <span className="text-xs font-medium text-gray-500">
                           {profil.stats}
                         </span>
                       </div>
-                      <span className="text-gray-700 text-xl">→</span>
+                      <span className="text-gray-400 text-lg flex-shrink-0">→</span>
                     </div>
                   </button>
                 );
