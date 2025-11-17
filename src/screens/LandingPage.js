@@ -24,7 +24,7 @@ function LandingPage() {
             </button>
             <button
               className="cta-button"
-              style={{ background: '#f97316', color: 'white' }}
+              style={{ background: '#1f2937', color: 'white' }}
               onClick={() => navigate('/business')}
             >
               Espace Professionnel
@@ -127,7 +127,7 @@ function LandingPage() {
             </button>
             <button
               className="cta-button-large"
-              style={{ background: '#f97316' }}
+              style={{ background: '#1f2937' }}
               onClick={() => navigate('/business')}
             >
               Rejoindre Andmoov Business

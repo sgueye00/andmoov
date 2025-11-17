@@ -63,23 +63,23 @@ const BusinessHome = () => {
       <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
         <div className="px-6 pt-6 pb-20 space-y-6">
           {/* Welcome Banner */}
-          <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-xl p-5 text-white">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-5 text-white">
             <h2 className="text-xl font-bold mb-2">Andmoov Business</h2>
-            <p className="text-orange-50 text-sm mb-4">
+            <p className="text-gray-200 text-sm mb-4">
               Rejoignez notre réseau de professionnels et commencez à gagner de l'argent dès aujourd'hui
             </p>
             <div className="grid grid-cols-3 gap-3">
               <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                 <div className="text-2xl font-bold">1,500+</div>
-                <div className="text-xs text-orange-100">Professionnels</div>
+                <div className="text-xs text-gray-200">Professionnels</div>
               </div>
               <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                 <div className="text-2xl font-bold">95%</div>
-                <div className="text-xs text-orange-100">Satisfaction</div>
+                <div className="text-xs text-gray-200">Satisfaction</div>
               </div>
               <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                 <div className="text-2xl font-bold">24/7</div>
-                <div className="text-xs text-orange-100">Support</div>
+                <div className="text-xs text-gray-200">Support</div>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ const BusinessHome = () => {
                   <button
                     key={profil.id}
                     onClick={() => navigate(profil.route)}
-                    className="w-full bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:border-orange-300 transition-all text-left"
+                    className="w-full bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:border-gray-400 transition-all text-left"
                   >
                     <div className="flex items-center gap-4">
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${profil.gradient} flex items-center justify-center flex-shrink-0`}>
@@ -107,7 +107,7 @@ const BusinessHome = () => {
                           {profil.stats}
                         </span>
                       </div>
-                      <span className="text-orange-600 text-xl">→</span>
+                      <span className="text-gray-700 text-xl">→</span>
                     </div>
                   </button>
                 );
