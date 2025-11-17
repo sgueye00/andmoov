@@ -30,12 +30,12 @@ const RestaurateurDashboard = () => {
       <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
         <div className="px-6 pt-6 pb-20 space-y-5">
           {/* Stats Header */}
-          <div className="rounded-xl p-5 text-white" style={{ background: 'linear-gradient(to right, #51B8EC, #2E8BC0)' }}>
+          <div className="bg-purple-600 rounded-xl p-5 text-white">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <p className="text-white/80 text-sm">Ventes aujourd'hui</p>
+                <p className="text-purple-50 text-sm">Ventes aujourd'hui</p>
                 <p className="text-3xl font-bold">{stats.aujourdhui.toLocaleString()} F</p>
-                <p className="text-xs text-white/80 mt-1">{stats.commandesAujourdhui} commandes</p>
+                <p className="text-xs text-purple-50 mt-1">{stats.commandesAujourdhui} commandes</p>
               </div>
               <UtensilsCrossed className="w-12 h-12 opacity-80" />
             </div>
@@ -60,23 +60,23 @@ const RestaurateurDashboard = () => {
 
           {/* Stats Cards */}
           <div className="grid grid-cols-3 gap-3">
-            <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-xl p-3 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
-                <TrendingUp className="w-4 h-4 text-orange-600" />
+                <TrendingUp className="w-4 h-4 text-purple-600" />
                 <p className="text-xs text-gray-500">Semaine</p>
               </div>
               <p className="text-lg font-bold text-gray-900">{(stats.semaine / 1000).toFixed(0)}K</p>
             </div>
-            <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-xl p-3 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
-                <ShoppingBag className="w-4 h-4 text-orange-600" />
+                <ShoppingBag className="w-4 h-4 text-purple-600" />
                 <p className="text-xs text-gray-500">Note</p>
               </div>
               <p className="text-lg font-bold text-gray-900">{stats.note}/5</p>
             </div>
-            <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-xl p-3 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
-                <UtensilsCrossed className="w-4 h-4 text-orange-600" />
+                <UtensilsCrossed className="w-4 h-4 text-purple-600" />
                 <p className="text-xs text-gray-500">Total</p>
               </div>
               <p className="text-lg font-bold text-gray-900">{stats.totalCommandes}</p>
@@ -88,13 +88,13 @@ const RestaurateurDashboard = () => {
             <h3 className="font-bold text-gray-900 mb-3">Commandes en cours</h3>
             <div className="space-y-3">
               {commandesEnCours.map((cmd, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                <div key={idx} className="bg-white rounded-xl p-4 border border-purple-200">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="font-bold text-gray-900 text-sm">{cmd.id}</span>
                         <span className={`text-xs px-2 py-0.5 rounded-full ${
-                          cmd.statut === 'Prêt' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'
+                          cmd.statut === 'Prêt' ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'
                         }`}>
                           {cmd.statut}
                         </span>
@@ -102,7 +102,7 @@ const RestaurateurDashboard = () => {
                       <p className="text-xs text-gray-600">{cmd.plats}</p>
                     </div>
                     <div className="text-right">
-                      <p className="font-bold text-orange-600 text-lg">{cmd.total} F</p>
+                      <p className="font-bold text-purple-600 text-lg">{cmd.total} F</p>
                       <p className="text-xs text-gray-500">Commission 15%</p>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ const RestaurateurDashboard = () => {
                   <button className={`w-full font-semibold py-2 rounded-lg mt-3 transition-colors ${
                     cmd.statut === 'Prêt'
                       ? 'bg-green-600 text-white hover:bg-green-700'
-                      : 'bg-orange-600 text-white hover:bg-orange-700'
+                      : 'bg-purple-600 text-white hover:bg-purple-700'
                   }`}>
                     {cmd.statut === 'Prêt' ? 'Marquer comme livrée' : 'Marquer comme prête'}
                   </button>
