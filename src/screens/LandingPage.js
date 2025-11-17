@@ -25,7 +25,7 @@ function LandingPage() {
               App Client
             </button>
             <button
-              className="bg-purple-600 text-white border-none px-12 py-4 text-lg font-bold rounded-lg cursor-pointer transition-all shadow-sm hover:bg-purple-700 hover:shadow-md"
+              className="bg-white text-purple-600 border-none px-12 py-4 text-lg font-bold rounded-lg cursor-pointer transition-all shadow-sm hover:bg-gray-100 hover:shadow-md"
               onClick={() => navigate('/business')}
             >
               Espace Professionnel
