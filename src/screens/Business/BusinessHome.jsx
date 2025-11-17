@@ -68,18 +68,18 @@ const BusinessHome = () => {
             <p className="text-purple-50 text-sm mb-4">
               Rejoignez notre réseau de professionnels et commencez à gagner de l'argent dès aujourd'hui
             </p>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                <div className="text-2xl font-bold">1,500+</div>
-                <div className="text-sm text-purple-100">Professionnels</div>
+            <div className="grid grid-cols-3 gap-3">
+              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                <div className="text-xl font-bold">1,500+</div>
+                <div className="text-xs text-purple-100">Pros</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                <div className="text-2xl font-bold">95%</div>
-                <div className="text-sm text-purple-100">Satisfaction</div>
+              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                <div className="text-xl font-bold">95%</div>
+                <div className="text-xs text-purple-100">Satisfait</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                <div className="text-2xl font-bold">24/7</div>
-                <div className="text-sm text-purple-100">Support</div>
+              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                <div className="text-xl font-bold">24/7</div>
+                <div className="text-xs text-purple-100">Support</div>
               </div>
             </div>
           </div>
