@@ -30,23 +30,23 @@ const ExpediteurDashboard = () => {
       <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
         <div className="px-6 pt-6 pb-20 space-y-5">
           {/* Stats Header */}
-          <div className="bg-gradient-to-r from-purple-500 to-purple-700 rounded-xl p-5 text-white">
+          <div className="rounded-xl p-5 text-white" style={{ background: 'linear-gradient(to right, #51B8EC, #2E8BC0)' }}>
             <div className="flex items-center justify-between mb-4">
               <div>
-                <p className="text-purple-100 text-sm">Dépenses ce mois</p>
+                <p className="text-white/80 text-sm">Dépenses ce mois</p>
                 <p className="text-3xl font-bold">{stats.mois.toLocaleString()} F</p>
-                <p className="text-xs text-purple-100 mt-1">{stats.colisEnvoyesMois} colis envoyés</p>
+                <p className="text-xs text-white/80 mt-1">{stats.colisEnvoyesMois} colis envoyés</p>
               </div>
               <Package className="w-12 h-12 opacity-80" />
             </div>
 
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                <p className="text-xs text-purple-100">En cours</p>
+                <p className="text-xs text-white/80">En cours</p>
                 <p className="text-2xl font-bold">{stats.enCours}</p>
               </div>
               <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                <p className="text-xs text-purple-100">Coût moyen</p>
+                <p className="text-xs text-white/80">Coût moyen</p>
                 <p className="text-2xl font-bold">{stats.moyenneCout} F</p>
               </div>
             </div>
@@ -55,7 +55,10 @@ const ExpediteurDashboard = () => {
           {/* Nouveau colis */}
           <button
             onClick={() => navigate('/colis')}
-            className="w-full bg-purple-600 text-white font-semibold py-4 rounded-xl hover:bg-purple-700 transition-colors flex items-center justify-center gap-2"
+            className="w-full text-white font-semibold py-4 rounded-xl transition-colors flex items-center justify-center gap-2"
+            style={{ background: '#51B8EC' }}
+            onMouseEnter={(e) => e.currentTarget.style.background = '#2E8BC0'}
+            onMouseLeave={(e) => e.currentTarget.style.background = '#51B8EC'}
           >
             <Package className="w-5 h-5" />
             Envoyer un nouveau colis

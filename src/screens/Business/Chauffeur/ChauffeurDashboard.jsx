@@ -25,12 +25,12 @@ const ChauffeurDashboard = () => {
       <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
         <div className="px-6 pt-6 pb-20 space-y-5">
           {/* Stats Header */}
-          <div className="bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl p-5 text-white">
+          <div className="rounded-xl p-5 text-white" style={{ background: 'linear-gradient(to right, #51B8EC, #2E8BC0)' }}>
             <div className="flex items-center justify-between mb-4">
               <div>
-                <p className="text-blue-100 text-sm">Gains aujourd'hui</p>
+                <p className="text-white/80 text-sm">Gains aujourd'hui</p>
                 <p className="text-3xl font-bold">{stats.aujourdhui.toLocaleString()} F</p>
-                <p className="text-xs text-blue-100 mt-1">{stats.coursesAujourdhui} courses effectuées</p>
+                <p className="text-xs text-white/80 mt-1">{stats.coursesAujourdhui} courses effectuées</p>
               </div>
               <Car className="w-12 h-12 opacity-80" />
             </div>

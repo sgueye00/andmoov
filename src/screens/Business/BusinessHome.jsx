@@ -63,23 +63,23 @@ const BusinessHome = () => {
       <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
         <div className="px-6 pt-6 pb-20 space-y-6">
           {/* Welcome Banner */}
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-5 text-white">
+          <div className="rounded-xl p-5 text-white" style={{ background: 'linear-gradient(to right, #51B8EC, #2E8BC0)' }}>
             <h2 className="text-xl font-bold mb-2">Andmoov Business</h2>
-            <p className="text-gray-200 text-sm mb-4">
+            <p className="text-white/90 text-sm mb-4">
               Rejoignez notre réseau de professionnels et commencez à gagner de l'argent dès aujourd'hui
             </p>
             <div className="grid grid-cols-3 gap-3">
               <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                 <div className="text-2xl font-bold">1,500+</div>
-                <div className="text-xs text-gray-200">Professionnels</div>
+                <div className="text-xs text-white/90">Professionnels</div>
               </div>
               <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                 <div className="text-2xl font-bold">95%</div>
-                <div className="text-xs text-gray-200">Satisfaction</div>
+                <div className="text-xs text-white/90">Satisfaction</div>
               </div>
               <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                 <div className="text-2xl font-bold">24/7</div>
-                <div className="text-xs text-gray-200">Support</div>
+                <div className="text-xs text-white/90">Support</div>
               </div>
             </div>
           </div>
@@ -161,10 +161,10 @@ const BusinessHome = () => {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-5 text-center text-white">
+          <div className="rounded-xl p-5 text-center text-white" style={{ background: 'linear-gradient(to right, #51B8EC, #2E8BC0)' }}>
             <h3 className="text-lg font-bold mb-1">Pas encore inscrit ?</h3>
-            <p className="text-gray-300 text-sm mb-4">Rejoignez Andmoov Business en quelques minutes</p>
-            <button className="w-full bg-white text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+            <p className="text-white/90 text-sm mb-4">Rejoignez Andmoov Business en quelques minutes</p>
+            <button className="w-full bg-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors" style={{ color: '#51B8EC' }}>
               Créer mon compte professionnel
             </button>
           </div>

@@ -80,7 +80,7 @@ const CoursierDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white sticky top-0 z-20 shadow-lg">
+      <div className="text-white sticky top-0 z-20 shadow-lg" style={{ background: 'linear-gradient(to right, #51B8EC, #2E8BC0)' }}>
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -92,7 +92,7 @@ const CoursierDashboard = () => {
               </button>
               <div>
                 <h1 className="text-xl font-bold">Coursier Moto 🏍️</h1>
-                <p className="text-sm text-orange-100">Tableau de bord</p>
+                <p className="text-sm text-white/80">Tableau de bord</p>
               </div>
             </div>
 
