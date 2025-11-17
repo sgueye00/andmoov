@@ -1,0 +1,121 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/LandingPage.css';
+
+function LandingPage() {
+  const navigate = useNavigate();
+
+  const handleDiscover = () => {
+    navigate('/app');
+  };
+
+  return (
+    <div className="landing-page">
+      {/* Hero Section */}
+      <header className="hero">
+        <div className="container">
+          <h1 className="logo">AndMoov</h1>
+          <p className="tagline">Ensemble, allons plus loin</p>
+          <p className="subtitle">La super-app sénégalaise pour vos courses, colis, repas et plus encore</p>
+          <button className="cta-button" onClick={handleDiscover}>
+            Découvrir la démo
+          </button>
+        </div>
+      </header>
+
+      {/* Features Section */}
+      <section className="features">
+        <div className="container">
+          <h2>Nos Services</h2>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">🚗</div>
+              <h3>AndMoov Course</h3>
+              <p>Réservez votre chauffeur en un clic. Choisissez parmi Eco, Standard ou Premium selon vos besoins et votre budget.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">📦</div>
+              <h3>AndMoov Colis</h3>
+              <p>Livraison flexible : à domicile ou en point relais gratuit chez nos commerçants partenaires. Économique et pratique !</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🍽️</div>
+              <h3>AndMoov Resto</h3>
+              <p>Commandez dans vos restaurants préférés à Dakar. Livraison rapide et suivi en temps réel de votre commande.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">💼</div>
+              <h3>AndMoov Business</h3>
+              <p>Solutions complètes pour restaurateurs, commerçants, chauffeurs et livreurs. Intégration e-commerce clé en main.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovation Section */}
+      <section className="innovation">
+        <div className="container">
+          <h2>🏪 Notre Innovation : Le Point Relais Gratuit</h2>
+          <div className="innovation-content">
+            <p className="innovation-text">
+              AndMoov révolutionne la livraison de colis à Dakar avec le <strong>Point Relais gratuit</strong> !
+              Récupérez vos colis chez nos commerçants partenaires sans frais supplémentaires.
+              Économique pour vous, bénéfique pour les commerces locaux.
+            </p>
+            <div className="innovation-benefits">
+              <div className="benefit">✅ Livraison gratuite en point relais</div>
+              <div className="benefit">✅ Réseau de commerces de proximité</div>
+              <div className="benefit">✅ Flexibilité horaire</div>
+              <div className="benefit">✅ Soutien à l'économie locale</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="stats">
+        <div className="container">
+          <div className="stats-grid">
+            <div className="stat">
+              <div className="stat-number">3 en 1</div>
+              <div className="stat-label">Services Intégrés</div>
+            </div>
+            <div className="stat">
+              <div className="stat-number">100%</div>
+              <div className="stat-label">Sénégalais</div>
+            </div>
+            <div className="stat">
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">Disponible</div>
+            </div>
+            <div className="stat">
+              <div className="stat-number">Wave/OM</div>
+              <div className="stat-label">Paiement Mobile</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="container">
+          <h2>Ensemble, Allons Plus Loin</h2>
+          <p>Découvrez la première super-app 100% sénégalaise qui réunit mobilité, livraison et restauration en une seule plateforme</p>
+          <button className="cta-button-large" onClick={handleDiscover}>
+            Tester la Démo Interactive
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="container">
+          <p>&copy; 2024 AndMoov - Made in Dakar, Sénégal 🇸🇳</p>
+          <p className="footer-note">Démo de présentation • Paiement Wave & Orange Money</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default LandingPage;
