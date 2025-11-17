@@ -20,14 +20,14 @@ function LandingPage() {
           <p className="subtitle">La super-app sénégalaise pour vos courses, colis, repas et plus encore</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '24px', flexWrap: 'wrap' }}>
             <button className="cta-button" onClick={handleDiscover}>
-              📱 App Client (Démo)
+              App Client (Démo)
             </button>
             <button
               className="cta-button"
-              style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)' }}
+              style={{ background: '#f97316', color: 'white' }}
               onClick={() => navigate('/business')}
             >
-              💼 Espace Professionnel
+              Espace Professionnel
             </button>
           </div>
         </div>
@@ -50,7 +50,7 @@ function LandingPage() {
                 <Package className="w-14 h-14 text-green-600 mx-auto" />
               </div>
               <h3>AndMoov Colis</h3>
-              <p>Envoyez vos colis dès 500 F ! Point relais (500-1000 F) ou livraison domicile (1500-2500 F). Le destinataire récupère gratuitement en point relais.</p>
+              <p>Envoyez vos colis dès 500 F ! Point relais (500-1000 F) ou livraison domicile (1500-2500 F). Le destinataire reçoit TOUJOURS gratuitement. Point relais moins cher grâce à l'envoi groupé.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
@@ -73,16 +73,16 @@ function LandingPage() {
       {/* Innovation Section */}
       <section className="innovation">
         <div className="container">
-          <h2>Notre Innovation : Le Point Relais Économique</h2>
+          <h2>Notre Innovation : Livraison 100% Gratuite pour le Destinataire</h2>
           <div className="innovation-content">
             <p className="innovation-text">
-              AndMoov révolutionne la livraison de colis à Dakar avec le <strong>Point Relais économique</strong> !
-              L'expéditeur paie l'envoi (500-1000 F selon taille), le destinataire récupère <strong>gratuitement</strong> chez nos commerçants partenaires.
-              Jusqu'à 3× moins cher que la concurrence, bénéfique pour les commerces locaux.
+              AndMoov révolutionne la livraison de colis à Dakar ! L'expéditeur paie l'envoi, le destinataire reçoit <strong>TOUJOURS gratuitement</strong>.
+              Le <strong>Point Relais économique</strong> (500-1000 F) profite de l'envoi groupé pour un tarif jusqu'à 3× moins cher que la livraison domicile (1500-2500 F).
+              Bénéfique pour tous et soutient les commerces locaux.
             </p>
             <div className="innovation-benefits">
-              <div className="benefit">✅ Dès 500 F pour l'expéditeur</div>
-              <div className="benefit">✅ Retrait 100% gratuit pour le destinataire</div>
+              <div className="benefit">✅ Destinataire reçoit 100% gratuit</div>
+              <div className="benefit">✅ Point Relais dès 500 F (envoi groupé)</div>
               <div className="benefit">✅ Réseau de 50+ commerces de proximité</div>
               <div className="benefit">✅ Flexibilité horaire (8h-20h, 7j/7)</div>
               <div className="benefit">✅ 3× moins cher que DHL/Poste</div>
@@ -123,14 +123,14 @@ function LandingPage() {
           <p>Découvrez la première super-app 100% sénégalaise qui réunit mobilité, livraison et restauration en une seule plateforme</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '32px', flexWrap: 'wrap' }}>
             <button className="cta-button-large" onClick={handleDiscover}>
-              📱 Tester l'App Client
+              Tester l'App Client
             </button>
             <button
               className="cta-button-large"
-              style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)' }}
+              style={{ background: '#f97316' }}
               onClick={() => navigate('/business')}
             >
-              💼 Rejoindre Andmoov Business
+              Rejoindre Andmoov Business
             </button>
           </div>
           <p style={{ marginTop: '16px', fontSize: '14px', color: '#6b7280' }}>
