@@ -99,11 +99,11 @@ const PointRelaisDashboard = () => {
                   </div>
                   <div className="flex gap-2 mt-3">
                     {colis.statut === 'En attente' ? (
-                      <button className="flex-1 bg-purple-600 text-white font-semibold py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+                      <button className="flex-1 bg-purple-600 text-white font-semibold py-1.5 rounded-lg hover:bg-purple-700 transition-colors text-sm">
                         Notifier destinataire
                       </button>
                     ) : (
-                      <button className="flex-1 bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                      <button className="flex-1 bg-green-600 text-white font-semibold py-1.5 rounded-lg hover:bg-green-700 transition-colors text-sm">
                         Marquer comme retiré
                       </button>
                     )}

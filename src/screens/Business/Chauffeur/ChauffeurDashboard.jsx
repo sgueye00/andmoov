@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Car, TrendingUp, Star, MapPin, Clock } from 'lucide-react';
+import { Car, TrendingUp, Star, MapPin, Clock, Award } from 'lucide-react';
 import Header from '../../../components/Header';
 
 const ChauffeurDashboard = () => {
@@ -14,6 +14,8 @@ const ChauffeurDashboard = () => {
     mois: 620000,
     note: 4.8,
     totalCourses: 412,
+    badge: 'Or',
+    commission: 20,
   };
 
   return (
@@ -75,6 +77,26 @@ const ChauffeurDashboard = () => {
                 <p className="text-xs text-gray-500">Total</p>
               </div>
               <p className="text-lg font-bold text-gray-900">{stats.totalCourses}</p>
+            </div>
+          </div>
+
+          {/* Badge */}
+          <div className="bg-purple-50 border border-purple-300 rounded-xl p-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-white border-2 border-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <Award className="w-8 h-8 text-purple-600" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-bold text-gray-900 text-base">Badge {stats.badge}</h3>
+                <p className="text-sm text-gray-600">
+                  Commission actuelle : {stats.commission}% • Vous recevez {100 - stats.commission}% du prix
+                </p>
+                <div className="mt-2 bg-white rounded-lg px-3 py-1 inline-block border border-purple-200">
+                  <span className="text-xs text-gray-600">
+                    Progression vers Diamant: <span className="font-semibold">{stats.totalCourses}/500</span>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
