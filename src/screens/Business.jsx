@@ -40,7 +40,7 @@ const Business = () => {
   const recentOrders = [
     { id: 1, customer: 'Fatou Diop', amount: 3500, status: 'pending', time: '5 min' },
     { id: 2, customer: 'Moussa Sarr', amount: 7200, status: 'completed', time: '15 min' },
-    { id: 3, customer: 'Aïcha Ndiaye', amount: 4500, status: 'pending', time: '8 min' },
+    { id: 3, customer: 'Aï¿½cha Ndiaye', amount: 4500, status: 'pending', time: '8 min' },
     { id: 4, customer: 'Cheikh Fall', amount: 6800, status: 'completed', time: '32 min' },
   ];
 
@@ -50,9 +50,9 @@ const Business = () => {
 
       <div className="px-6 py-6 space-y-6">
         {/* Welcome */}
-        <div className="bg-gradient-to-r from-purple-500 to-purple-700 rounded-2xl p-6 text-white">
+        <div className="bg-purple-600 rounded-2xl p-6 text-white">
           <h2 className="text-2xl font-bold mb-2">Tableau de bord</h2>
-          <p className="text-purple-100">Restaurant Pizza Roma</p>
+          <p className="text-purple-50">Restaurant Pizza Roma</p>
         </div>
 
         {/* Period selector */}
@@ -78,10 +78,10 @@ const Business = () => {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white rounded-2xl p-4 shadow-sm">
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-purple-200">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center">
-                <DollarSign className="w-5 h-5 text-green-600" />
+              <div className="w-10 h-10 bg-white border border-purple-600 rounded-xl flex items-center justify-center">
+                <DollarSign className="w-5 h-5 text-purple-600" />
               </div>
               <p className="text-gray-600 text-sm">Revenus</p>
             </div>
@@ -92,30 +92,30 @@ const Business = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-4 shadow-sm">
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-purple-200">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
-                <Package className="w-5 h-5 text-blue-600" />
+              <div className="w-10 h-10 bg-white border border-purple-600 rounded-xl flex items-center justify-center">
+                <Package className="w-5 h-5 text-purple-600" />
               </div>
               <p className="text-gray-600 text-sm">Commandes</p>
             </div>
             <p className="text-2xl font-bold text-gray-900">{currentStats.orders}</p>
-            <p className="text-xs text-gray-500 mt-1">{currentStats.completed} terminées</p>
+            <p className="text-xs text-gray-500 mt-1">{currentStats.completed} terminï¿½es</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-4 shadow-sm">
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-purple-200">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center">
-                <Clock className="w-5 h-5 text-orange-600" />
+              <div className="w-10 h-10 bg-white border border-purple-600 rounded-xl flex items-center justify-center">
+                <Clock className="w-5 h-5 text-purple-600" />
               </div>
               <p className="text-gray-600 text-sm">En attente</p>
             </div>
             <p className="text-2xl font-bold text-gray-900">{currentStats.pending}</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-4 shadow-sm">
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-purple-200">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-white border border-purple-600 rounded-xl flex items-center justify-center">
                 <Users className="w-5 h-5 text-purple-600" />
               </div>
               <p className="text-gray-600 text-sm">Clients</p>
@@ -128,7 +128,7 @@ const Business = () => {
         {/* Recent Orders */}
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-bold text-gray-900">Commandes récentes</h3>
+            <h3 className="text-lg font-bold text-gray-900">Commandes rï¿½centes</h3>
             <button className="text-purple-600 text-sm font-semibold">Voir tout</button>
           </div>
 
@@ -161,12 +161,12 @@ const Business = () => {
                     {order.status === 'pending' ? (
                       <>
                         <AlertCircle className="w-3 h-3" />
-                        En préparation
+                        En prï¿½paration
                       </>
                     ) : (
                       <>
                         <CheckCircle className="w-3 h-3" />
-                        Livrée
+                        Livrï¿½e
                       </>
                     )}
                   </span>
@@ -184,12 +184,12 @@ const Business = () => {
 
         {/* Quick Actions */}
         <div className="grid grid-cols-2 gap-4">
-          <button className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
+          <button className="bg-white rounded-2xl p-4 border border-purple-200 hover:border-purple-400 transition-all">
             <BarChart3 className="w-8 h-8 text-purple-600 mb-2" />
             <p className="font-semibold text-gray-900">Statistiques</p>
           </button>
-          <button className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
-            <Package className="w-8 h-8 text-blue-600 mb-2" />
+          <button className="bg-white rounded-2xl p-4 border border-purple-200 hover:border-purple-400 transition-all">
+            <Package className="w-8 h-8 text-purple-600 mb-2" />
             <p className="font-semibold text-gray-900">Menu</p>
           </button>
         </div>

@@ -30,12 +30,12 @@ const ExpediteurDashboard = () => {
       <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
         <div className="px-6 pt-6 pb-20 space-y-5">
           {/* Stats Header */}
-          <div className="rounded-xl p-5 text-white" style={{ background: 'linear-gradient(to right, #51B8EC, #2E8BC0)' }}>
+          <div className="bg-purple-600 rounded-xl p-5 text-white">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <p className="text-white/80 text-sm">Dépenses ce mois</p>
+                <p className="text-purple-50 text-sm">Dépenses ce mois</p>
                 <p className="text-3xl font-bold">{stats.mois.toLocaleString()} F</p>
-                <p className="text-xs text-white/80 mt-1">{stats.colisEnvoyesMois} colis envoyés</p>
+                <p className="text-xs text-purple-50 mt-1">{stats.colisEnvoyesMois} colis envoyés</p>
               </div>
               <Package className="w-12 h-12 opacity-80" />
             </div>
@@ -55,10 +55,7 @@ const ExpediteurDashboard = () => {
           {/* Nouveau colis */}
           <button
             onClick={() => navigate('/colis')}
-            className="w-full text-white font-semibold py-4 rounded-xl transition-colors flex items-center justify-center gap-2"
-            style={{ background: '#51B8EC' }}
-            onMouseEnter={(e) => e.currentTarget.style.background = '#2E8BC0'}
-            onMouseLeave={(e) => e.currentTarget.style.background = '#51B8EC'}
+            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-xl transition-colors flex items-center justify-center gap-2"
           >
             <Package className="w-5 h-5" />
             Envoyer un nouveau colis
@@ -66,21 +63,21 @@ const ExpediteurDashboard = () => {
 
           {/* Stats Cards */}
           <div className="grid grid-cols-3 gap-3">
-            <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-xl p-3 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
                 <TrendingUp className="w-4 h-4 text-purple-600" />
                 <p className="text-xs text-gray-500">Total</p>
               </div>
               <p className="text-lg font-bold text-gray-900">{stats.livres}</p>
             </div>
-            <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-xl p-3 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
                 <Clock className="w-4 h-4 text-purple-600" />
                 <p className="text-xs text-gray-500">En cours</p>
               </div>
               <p className="text-lg font-bold text-gray-900">{stats.enCours}</p>
             </div>
-            <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-xl p-3 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
                 <Package className="w-4 h-4 text-purple-600" />
                 <p className="text-xs text-gray-500">Mois</p>
@@ -94,7 +91,7 @@ const ExpediteurDashboard = () => {
             <h3 className="font-bold text-gray-900 mb-3">Mes colis en cours</h3>
             <div className="space-y-3">
               {colisEnCours.map((colis, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                <div key={idx} className="bg-white rounded-xl p-4 border border-purple-200">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
@@ -103,7 +100,7 @@ const ExpediteurDashboard = () => {
                           colis.statut === 'Livré au Point Relais'
                             ? 'bg-green-100 text-green-700'
                             : colis.statut === 'En transit'
-                            ? 'bg-blue-100 text-blue-700'
+                            ? 'bg-purple-100 text-purple-700'
                             : 'bg-yellow-100 text-yellow-700'
                         }`}>
                           {colis.statut}
@@ -119,7 +116,7 @@ const ExpediteurDashboard = () => {
                             <span>Point Relais</span>
                           </div>
                         ) : (
-                          <div className="flex items-center gap-1 text-xs text-blue-600">
+                          <div className="flex items-center gap-1 text-xs text-purple-600">
                             <Home className="w-3 h-3" />
                             <span>Domicile</span>
                           </div>
