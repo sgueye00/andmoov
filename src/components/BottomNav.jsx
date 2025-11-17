@@ -7,7 +7,7 @@ const BottomNav = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', icon: Home, label: 'Accueil' },
+    { path: '/app', icon: Home, label: 'Accueil' },
     { path: '/commandes', icon: ShoppingBag, label: 'Commandes' },
     { path: '/compte', icon: User, label: 'Compte' },
   ];
@@ -16,7 +16,7 @@ const BottomNav = () => {
     <div className="sticky bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex justify-around items-center z-40 mt-auto">
       {navItems.map((item) => {
         const Icon = item.icon;
-        const isActive = location.pathname === item.path;
+        const isActive = location.pathname === item.path || (item.path === '/app' && location.pathname === '/');
 
         return (
           <button

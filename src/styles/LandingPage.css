@@ -19,8 +19,7 @@
 .hero {
   background: #2563EB;
   color: white;
-  padding: 120px 24px;
-  min-height: 100vh;
+  padding: 64px 24px 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,8 +139,8 @@
 
 .innovation-benefits {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
 .benefit {
@@ -241,6 +240,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero {
+    padding: 48px 24px 32px;
+  }
+
   .logo {
     font-size: 2.5rem;
   }
@@ -263,5 +266,14 @@
 
   .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .innovation-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit {
+    padding: 16px;
+    font-size: 1rem;
   }
 }
