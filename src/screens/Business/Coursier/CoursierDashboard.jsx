@@ -84,37 +84,45 @@ const CoursierDashboard = () => {
       {/* Header */}
       <div className="bg-purple-600 text-white sticky top-0 z-20 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => navigate('/business')}
-                className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-              >
-                <ArrowLeft className="w-5 h-5" />
-              </button>
-              <div className="flex items-center gap-2">
-                <Bike className="w-6 h-6" />
-                <div>
-                  <h1 className="text-xl font-bold">Coursier Moto</h1>
-                  <p className="text-sm text-purple-100">Tableau de bord</p>
-                </div>
+          <div className="flex items-center gap-4 mb-4">
+            <button
+              onClick={() => navigate('/business')}
+              className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </button>
+            <div className="flex items-center gap-2">
+              <Bike className="w-6 h-6" />
+              <div>
+                <h1 className="text-xl font-bold">Coursier Moto</h1>
+                <p className="text-sm text-purple-100">Tableau de bord</p>
               </div>
+            </div>
+          </div>
+
+          {/* Stats Header */}
+          <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm mb-3">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex-1 min-w-0">
+                <p className="text-purple-50 text-xs">Aujourd'hui</p>
+                <p className="text-2xl font-bold">{stats.aujourdhui.toLocaleString()} F</p>
+                <p className="text-xs text-purple-50 mt-0.5">{stats.coursesAujourdhui} courses</p>
+              </div>
+              <Bike className="w-10 h-10 opacity-80 flex-shrink-0 ml-2" />
             </div>
 
             {/* Toggle Disponibilité */}
-            <div className="flex items-center gap-4">
-              <span className="text-sm font-medium">
-                {disponible ? 'En ligne' : 'Hors ligne'}
-              </span>
+            <div className="flex items-center justify-between bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+              <span className="text-sm font-medium">Disponible pour courses</span>
               <button
                 onClick={() => setDisponible(!disponible)}
-                className={`relative inline-flex h-8 w-14 items-center rounded-full transition-colors ${
+                className={`relative w-14 h-7 rounded-full transition-colors ${
                   disponible ? 'bg-green-500' : 'bg-gray-400'
                 }`}
               >
-                <span
-                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                    disponible ? 'translate-x-7' : 'translate-x-1'
+                <div
+                  className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full transition-transform ${
+                    disponible ? 'translate-x-7' : 'translate-x-0'
                   }`}
                 />
               </button>
@@ -125,39 +133,29 @@ const CoursierDashboard = () => {
 
       <div className="max-w-6xl mx-auto px-6 py-6 space-y-6">
         {/* Stats Cards */}
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           <div className="bg-white rounded-xl p-3 border border-purple-200">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-gray-500">Aujourd'hui</span>
-              <DollarSign className="w-4 h-4 text-purple-600 flex-shrink-0" />
+            <div className="flex items-center gap-2 mb-2">
+              <TrendingUp className="w-4 h-4 text-purple-600" />
+              <p className="text-xs text-gray-500">Semaine</p>
             </div>
-            <div className="text-xl font-bold text-gray-900 truncate">{stats.aujourdhui.toLocaleString()} F</div>
-            <div className="text-xs text-gray-500 mt-1">{stats.coursesAujourdhui} courses</div>
+            <p className="text-lg font-bold text-gray-900">{(stats.semaine / 1000).toFixed(0)}K</p>
           </div>
 
           <div className="bg-white rounded-xl p-3 border border-purple-200">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-gray-500">Semaine</span>
-              <TrendingUp className="w-4 h-4 text-purple-600 flex-shrink-0" />
+            <div className="flex items-center gap-2 mb-2">
+              <Star className="w-4 h-4 text-yellow-500" />
+              <p className="text-xs text-gray-500">Note</p>
             </div>
-            <div className="text-xl font-bold text-gray-900 truncate">{stats.semaine.toLocaleString()} F</div>
+            <p className="text-lg font-bold text-gray-900">{stats.note}/5</p>
           </div>
 
           <div className="bg-white rounded-xl p-3 border border-purple-200">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-gray-500">Mois</span>
-              <Package className="w-4 h-4 text-purple-600 flex-shrink-0" />
+            <div className="flex items-center gap-2 mb-2">
+              <Package className="w-4 h-4 text-purple-600" />
+              <p className="text-xs text-gray-500">Total</p>
             </div>
-            <div className="text-xl font-bold text-gray-900 truncate">{stats.mois.toLocaleString()} F</div>
-          </div>
-
-          <div className="bg-white rounded-xl p-3 border border-purple-200">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-gray-500">Note</span>
-              <Star className="w-4 h-4 text-yellow-500 fill-yellow-500 flex-shrink-0" />
-            </div>
-            <div className="text-xl font-bold text-gray-900">{stats.note}/5</div>
-            <div className="text-xs text-gray-500 mt-1">{stats.totalCourses} courses</div>
+            <p className="text-lg font-bold text-gray-900">{stats.totalCourses}</p>
           </div>
         </div>
 
@@ -237,15 +235,15 @@ const CoursierDashboard = () => {
 
             {/* Actions */}
             <div className="grid grid-cols-3 gap-4">
-              <button className="flex items-center justify-center gap-2 bg-white border border-purple-600 text-purple-600 font-semibold py-3 rounded-xl hover:bg-purple-50 transition-colors">
+              <button className="flex items-center justify-center gap-2 bg-white border border-purple-600 text-purple-600 font-semibold py-2 rounded-xl hover:bg-purple-50 transition-colors">
                 <Phone className="w-4 h-4" />
                 <span className="text-sm">Appeler</span>
               </button>
-              <button className="flex items-center justify-center gap-2 bg-white border border-purple-600 text-purple-600 font-semibold py-3 rounded-xl hover:bg-purple-50 transition-colors">
+              <button className="flex items-center justify-center gap-2 bg-white border border-purple-600 text-purple-600 font-semibold py-2 rounded-xl hover:bg-purple-50 transition-colors">
                 <Camera className="w-4 h-4" />
                 <span className="text-sm">Photo</span>
               </button>
-              <button className="flex items-center justify-center gap-2 bg-white border border-red-600 text-red-600 font-semibold py-3 rounded-xl hover:bg-red-50 transition-colors">
+              <button className="flex items-center justify-center gap-2 bg-white border border-red-600 text-red-600 font-semibold py-2 rounded-xl hover:bg-red-50 transition-colors">
                 <AlertCircle className="w-4 h-4" />
                 <span className="text-sm">Problème</span>
               </button>
@@ -306,10 +304,10 @@ const CoursierDashboard = () => {
                   </div>
 
                   <div className="flex gap-4">
-                    <button className="flex-1 bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition-colors">
+                    <button className="flex-1 bg-green-600 text-white font-semibold py-2 rounded-xl hover:bg-green-700 transition-colors">
                       Accepter
                     </button>
-                    <button className="px-6 bg-gray-100 text-gray-700 font-semibold py-3 rounded-xl hover:bg-gray-200 transition-colors">
+                    <button className="px-6 bg-gray-100 text-gray-700 font-semibold py-2 rounded-xl hover:bg-gray-200 transition-colors">
                       Refuser
                     </button>
                   </div>
@@ -330,7 +328,7 @@ const CoursierDashboard = () => {
             </p>
             <button
               onClick={() => setDisponible(true)}
-              className="bg-purple-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-purple-700 transition-colors"
+              className="bg-purple-600 text-white font-semibold px-8 py-2 rounded-xl hover:bg-purple-700 transition-colors"
             >
               Passer en ligne
             </button>

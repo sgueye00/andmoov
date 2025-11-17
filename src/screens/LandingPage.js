@@ -24,7 +24,7 @@ function LandingPage() {
             </button>
             <button
               className="cta-button"
-              style={{ background: 'white', color: '#9333EA', border: '2px solid #9333EA' }}
+              style={{ background: 'white', color: '#9333EA' }}
               onClick={() => navigate('/business')}
             >
               Espace Professionnel
@@ -85,7 +85,6 @@ function LandingPage() {
               <div className="benefit">✅ Point Relais économique (envoi groupé)</div>
               <div className="benefit">✅ Réseau de 50+ commerces de proximité</div>
               <div className="benefit">✅ Flexibilité horaire (8h-20h, 7j/7)</div>
-              <div className="benefit">✅ 3× moins cher que DHL/Poste</div>
               <div className="benefit">✅ Soutien à l'économie locale</div>
             </div>
           </div>
@@ -127,7 +126,7 @@ function LandingPage() {
             </button>
             <button
               className="cta-button-large"
-              style={{ background: 'white', color: '#9333EA', border: '2px solid #9333EA' }}
+              style={{ background: 'white', color: '#9333EA' }}
               onClick={() => navigate('/business')}
             >
               Rejoindre Andmoov Business

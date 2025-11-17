@@ -55,7 +55,7 @@ const ExpediteurDashboard = () => {
           {/* Nouveau colis */}
           <button
             onClick={() => navigate('/colis')}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-xl transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-xl transition-colors flex items-center justify-center gap-2"
           >
             <Package className="w-5 h-5" />
             Envoyer un nouveau colis
@@ -128,7 +128,7 @@ const ExpediteurDashboard = () => {
                       <p className="text-xs text-gray-500">{colis.taille}</p>
                     </div>
                   </div>
-                  <button className="w-full bg-gray-100 text-gray-700 font-medium py-2 rounded-lg hover:bg-gray-200 transition-colors text-sm">
+                  <button className="w-full bg-gray-100 text-gray-700 font-medium py-1.5 rounded-lg hover:bg-gray-200 transition-colors text-sm">
                     Suivre le colis
                   </button>
                 </div>
