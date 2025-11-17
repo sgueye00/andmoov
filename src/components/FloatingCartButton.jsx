@@ -21,7 +21,7 @@ const FloatingCartButton = () => {
   return (
     <button
       onClick={() => navigate('/panier')}
-      className="absolute bottom-24 right-6 z-40 bg-orange-500 hover:bg-orange-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110"
+      className="absolute bottom-24 right-6 z-40 bg-orange-500 hover:bg-orange-600 text-white w-14 h-14 rounded-full shadow-md flex items-center justify-center transition-colors"
       aria-label="Voir le panier"
     >
       <ShoppingBag className="w-6 h-6" />

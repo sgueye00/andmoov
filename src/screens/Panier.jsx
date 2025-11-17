@@ -138,7 +138,7 @@ const Panier = () => {
           </div>
         </div>
 
-        <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold py-4 rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all">
+        <button className="w-full bg-orange-500 text-white font-semibold py-4 rounded-lg hover:bg-orange-600 transition-colors">
           Commander maintenant
         </button>
       </div>

@@ -37,10 +37,10 @@ const Dashboard = () => {
   return (
     <div className="h-screen bg-gray-50 flex flex-col">
       {/* Header - Sticky */}
-      <div className="sticky top-0 z-30 bg-gradient-to-br from-blue-600 to-blue-700 text-white px-6 pt-10 pb-4 rounded-b-3xl shadow-lg">
+      <div className="sticky top-0 z-30 bg-blue-600 text-white px-6 pt-10 pb-4 rounded-b-3xl shadow-sm">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold mb-0.5">Bonjour, Djibril 👋</h1>
+            <h1 className="text-2xl font-bold mb-0.5">Bonjour, Djibril</h1>
             <p className="text-blue-50 text-sm">Que souhaitez-vous faire aujourd'hui ?</p>
           </div>
           <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center">
