@@ -1,13 +1,16 @@
 export const colors = {
+  // Couleur d'accent principale - UNIQUE
   primary: '#2563EB',
   primaryDark: '#1E40AF',
   primaryLight: '#3B82F6',
-  secondary: '#10B981',
-  secondaryDark: '#059669',
-  secondaryLight: '#34D399',
-  accent: '#F59E0B',
-  accentDark: '#D97706',
-  accentLight: '#FBBF24',
+
+  // Couleurs sémantiques uniquement (pas pour les interfaces générales)
+  success: '#10B981',
+  error: '#EF4444',
+  warning: '#F59E0B',
+  info: '#3B82F6',
+
+  // Neutrals - Palette de gris
   background: '#F9FAFB',
   white: '#FFFFFF',
   gray50: '#F9FAFB',
@@ -20,10 +23,6 @@ export const colors = {
   gray700: '#374151',
   gray800: '#1F2937',
   gray900: '#111827',
-  error: '#EF4444',
-  success: '#10B981',
-  warning: '#F59E0B',
-  info: '#3B82F6',
 };
 
 export const typography = {

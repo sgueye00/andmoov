@@ -38,7 +38,7 @@ const ChauffeurDashboard = () => {
             </div>
 
             {/* Toggle Disponibilité */}
-            <div className="flex items-center justify-between bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+            <div className="flex items-center justify-between bg-white/10 rounded-lg p-4 backdrop-blur-sm">
               <span className="text-sm font-medium">Disponible pour courses</span>
               <button
                 onClick={() => setDisponible(!disponible)}
@@ -56,22 +56,22 @@ const ChauffeurDashboard = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-3 gap-3">
-            <div className="bg-white rounded-xl p-3 border border-purple-200">
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-white rounded-xl p-4 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
                 <TrendingUp className="w-4 h-4 text-purple-600" />
                 <p className="text-xs text-gray-500">Semaine</p>
               </div>
               <p className="text-lg font-bold text-gray-900">{(stats.semaine / 1000).toFixed(0)}K</p>
             </div>
-            <div className="bg-white rounded-xl p-3 border border-purple-200">
+            <div className="bg-white rounded-xl p-4 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
                 <Star className="w-4 h-4 text-yellow-500" />
                 <p className="text-xs text-gray-500">Note</p>
               </div>
               <p className="text-lg font-bold text-gray-900">{stats.note}/5</p>
             </div>
-            <div className="bg-white rounded-xl p-3 border border-purple-200">
+            <div className="bg-white rounded-xl p-4 border border-purple-200">
               <div className="flex items-center gap-2 mb-2">
                 <Car className="w-4 h-4 text-purple-600" />
                 <p className="text-xs text-gray-500">Total</p>

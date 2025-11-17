@@ -157,7 +157,7 @@ const Course = () => {
         {/* Pin de départ (si départ renseigné) */}
         {depart && (
           <div className="absolute left-1/4 top-1/3 animate-bounce">
-            <div className="bg-green-500 p-2 rounded-full shadow-lg">
+            <div className="bg-green-500 p-2 rounded-full shadow-sm">
               <div className="w-3 h-3 bg-white rounded-full"></div>
             </div>
           </div>
@@ -166,25 +166,25 @@ const Course = () => {
         {/* Pin d'arrivée (si arrivée renseignée) */}
         {arrivee && (
           <div className="absolute right-1/4 bottom-1/3 animate-bounce">
-            <div className="bg-red-500 p-3 rounded-full shadow-lg">
+            <div className="bg-red-500 p-3 rounded-full shadow-sm">
               <MapPin className="w-5 h-5 text-white" />
             </div>
           </div>
         )}
 
         {/* Overlay avec info */}
-        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-md">
+        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-sm">
           <p className="text-xs font-semibold text-gray-700">Dakar, Sénégal</p>
           <p className="text-xs text-gray-500">{availableCars.length} véhicules disponibles</p>
         </div>
 
         {/* Bouton de recentrage */}
-        <button className="absolute bottom-3 right-3 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 transition-colors">
+        <button className="absolute bottom-3 right-3 bg-white p-3 rounded-full shadow-sm hover:bg-gray-50 transition-colors">
           <Navigation className="w-5 h-5 text-blue-600" />
         </button>
 
         {/* Bouton zoom */}
-        <div className="absolute bottom-3 left-3 bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="absolute bottom-3 left-3 bg-white rounded-lg shadow-sm overflow-hidden">
           <button className="px-3 py-2 hover:bg-gray-50 border-b border-gray-200 transition-colors">
             <span className="text-xl font-semibold text-gray-700">+</span>
           </button>
@@ -205,7 +205,7 @@ const Course = () => {
                 onClick={() => setCategory(cat.name)}
                 className={`p-4 rounded-lg border transition-all ${
                   category === cat.name
-                    ? cat.color + ' shadow-md'
+                    ? cat.color + ' shadow-sm'
                     : 'bg-white border-gray-200 text-gray-700 hover:border-gray-300'
                 }`}
               >

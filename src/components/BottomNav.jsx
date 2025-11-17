@@ -29,7 +29,7 @@ const BottomNav = () => {
             }`}
           >
             <Icon className={`w-6 h-6`} />
-            <span className={`text-xs font-medium`}>
+            <span className={`text-sm font-medium`}>
               {item.label}
             </span>
           </button>
