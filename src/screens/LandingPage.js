@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Car, Package, UtensilsCrossed, Briefcase } from 'lucide-react';
 import '../styles/LandingPage.css';
 
 function LandingPage() {
@@ -29,22 +30,30 @@ function LandingPage() {
           <h2>Nos Services</h2>
           <div className="features-grid">
             <div className="feature-card">
-              <div className="feature-icon">🚗</div>
+              <div className="feature-icon">
+                <Car className="w-14 h-14 text-blue-600 mx-auto" />
+              </div>
               <h3>AndMoov Course</h3>
               <p>Réservez votre chauffeur en un clic. Choisissez parmi Eco, Standard ou Premium selon vos besoins et votre budget.</p>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">📦</div>
+              <div className="feature-icon">
+                <Package className="w-14 h-14 text-green-600 mx-auto" />
+              </div>
               <h3>AndMoov Colis</h3>
               <p>Livraison flexible : à domicile ou en point relais gratuit chez nos commerçants partenaires. Économique et pratique !</p>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">🍽️</div>
+              <div className="feature-icon">
+                <UtensilsCrossed className="w-14 h-14 text-orange-600 mx-auto" />
+              </div>
               <h3>AndMoov Resto</h3>
               <p>Commandez dans vos restaurants préférés à Dakar. Livraison rapide et suivi en temps réel de votre commande.</p>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">💼</div>
+              <div className="feature-icon">
+                <Briefcase className="w-14 h-14 text-gray-700 mx-auto" />
+              </div>
               <h3>AndMoov Business</h3>
               <p>Solutions complètes pour restaurateurs, commerçants, chauffeurs et livreurs. Intégration e-commerce clé en main.</p>
             </div>
@@ -55,7 +64,7 @@ function LandingPage() {
       {/* Innovation Section */}
       <section className="innovation">
         <div className="container">
-          <h2>🏪 Notre Innovation : Le Point Relais Gratuit</h2>
+          <h2>Notre Innovation : Le Point Relais Gratuit</h2>
           <div className="innovation-content">
             <p className="innovation-text">
               AndMoov révolutionne la livraison de colis à Dakar avec le <strong>Point Relais gratuit</strong> !

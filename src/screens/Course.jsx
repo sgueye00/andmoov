@@ -141,14 +141,14 @@ const Course = () => {
         {availableCars.map((car) => (
           <div
             key={car.id}
-            className="absolute transition-all duration-300 hover:scale-125 cursor-pointer"
+            className="absolute transition-all duration-300 cursor-pointer"
             style={{
               left: `${car.x}%`,
               top: `${car.y}%`,
               transform: `translate(-50%, -50%) rotate(${car.rotation}deg)`,
             }}
           >
-            <div className={`${categories.find(c => c.name === car.type)?.bgColor} p-2 rounded-full shadow-lg animate-pulse`}>
+            <div className={`${categories.find(c => c.name === car.type)?.bgColor} p-2 rounded-lg shadow-sm animate-pulse`}>
               <Car className="w-4 h-4 text-white" />
             </div>
           </div>
@@ -203,9 +203,9 @@ const Course = () => {
               <button
                 key={cat.name}
                 onClick={() => setCategory(cat.name)}
-                className={`p-4 rounded-xl border-2 transition-all transform hover:scale-105 ${
+                className={`p-4 rounded-lg border transition-all ${
                   category === cat.name
-                    ? cat.color + ' scale-105 shadow-lg'
+                    ? cat.color + ' shadow-md'
                     : 'bg-white border-gray-200 text-gray-700 hover:border-gray-300'
                 }`}
               >
@@ -219,7 +219,7 @@ const Course = () => {
 
         {/* Price estimate */}
         {depart && arrivee && (
-          <div className="bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl p-5 text-white">
+          <div className="bg-blue-600 rounded-lg p-6 text-white shadow-sm">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <p className="text-sm text-blue-100">Prix estimé</p>
@@ -233,7 +233,7 @@ const Course = () => {
               </div>
             </div>
 
-            <button className="w-full bg-white text-blue-600 font-semibold py-3 rounded-xl hover:bg-blue-50 transition-colors">
+            <button className="w-full bg-white text-blue-600 font-semibold py-3 rounded-lg hover:bg-blue-50 transition-colors">
               Confirmer la course
             </button>
           </div>
