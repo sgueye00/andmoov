@@ -161,10 +161,10 @@ const BusinessHome = () => {
           </div>
 
           {/* CTA */}
-          <div className="bg-purple-900 rounded-xl p-6 text-center text-white">
+          <div className="bg-purple-600 rounded-xl p-6 text-center text-white">
             <h3 className="text-lg font-bold mb-1">Pas encore inscrit ?</h3>
-            <p className="text-purple-200 text-sm mb-4">Rejoignez Andmoov Business en quelques minutes</p>
-            <button className="w-full bg-white text-purple-900 font-semibold px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors">
+            <p className="text-purple-100 text-sm mb-4">Rejoignez Andmoov Business en quelques minutes</p>
+            <button className="w-full bg-white text-purple-600 font-semibold px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors">
               Créer mon compte professionnel
             </button>
           </div>

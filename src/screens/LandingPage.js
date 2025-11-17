@@ -120,28 +120,13 @@ function LandingPage() {
         <div className="container">
           <h2>Ensemble, Allons Plus Loin</h2>
           <p>Découvrez la première super-app 100% sénégalaise qui réunit mobilité, livraison et restauration en une seule plateforme</p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '32px', flexWrap: 'wrap' }}>
-            <button className="cta-button-large" onClick={handleDiscover}>
-              Tester l'App Client
-            </button>
-            <button
-              className="cta-button-large"
-              style={{ background: 'white', color: '#9333EA' }}
-              onClick={() => navigate('/business')}
-            >
-              Rejoindre Andmoov Business
-            </button>
-          </div>
-          <p style={{ marginTop: '16px', fontSize: '14px', color: '#6b7280' }}>
-            Vous êtes coursier, chauffeur, restaurateur, point relais ou e-commerçant ? Rejoignez Andmoov Business !
-          </p>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 AndMoov - Made in Dakar, Sénégal 🇸🇳</p>
+          <p>&copy; 2025 AndMoov - Made in Dakar, Sénégal 🇸🇳</p>
           <p className="footer-note">Démo de présentation • Paiement Wave & Orange Money</p>
         </div>
       </footer>

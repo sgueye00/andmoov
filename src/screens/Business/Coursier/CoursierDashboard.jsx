@@ -234,18 +234,18 @@ const CoursierDashboard = () => {
             </div>
 
             {/* Actions */}
-            <div className="grid grid-cols-3 gap-4">
-              <button className="flex items-center justify-center gap-2 bg-white border border-purple-600 text-purple-600 font-semibold py-2 rounded-xl hover:bg-purple-50 transition-colors">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">Appeler</span>
+            <div className="grid grid-cols-3 gap-2">
+              <button className="flex flex-col items-center justify-center gap-1 bg-white border border-purple-600 text-purple-600 font-semibold py-2 px-1 rounded-xl hover:bg-purple-50 transition-colors">
+                <Phone className="w-5 h-5" />
+                <span className="text-xs">Appeler</span>
               </button>
-              <button className="flex items-center justify-center gap-2 bg-white border border-purple-600 text-purple-600 font-semibold py-2 rounded-xl hover:bg-purple-50 transition-colors">
-                <Camera className="w-4 h-4" />
-                <span className="text-sm">Photo</span>
+              <button className="flex flex-col items-center justify-center gap-1 bg-white border border-purple-600 text-purple-600 font-semibold py-2 px-1 rounded-xl hover:bg-purple-50 transition-colors">
+                <Camera className="w-5 h-5" />
+                <span className="text-xs">Photo</span>
               </button>
-              <button className="flex items-center justify-center gap-2 bg-white border border-red-600 text-red-600 font-semibold py-2 rounded-xl hover:bg-red-50 transition-colors">
-                <AlertCircle className="w-4 h-4" />
-                <span className="text-sm">Problème</span>
+              <button className="flex flex-col items-center justify-center gap-1 bg-white border border-red-600 text-red-600 font-semibold py-2 px-1 rounded-xl hover:bg-red-50 transition-colors">
+                <AlertCircle className="w-5 h-5" />
+                <span className="text-xs">Problème</span>
               </button>
             </div>
           </div>
