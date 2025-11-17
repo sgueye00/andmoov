@@ -17,6 +17,10 @@ import Business from './screens/Business';
 // Andmoov Business - Écrans professionnels
 import BusinessHome from './screens/Business/BusinessHome';
 import CoursierDashboard from './screens/Business/Coursier/CoursierDashboard';
+import ChauffeurDashboard from './screens/Business/Chauffeur/ChauffeurDashboard';
+import RestaurateurDashboard from './screens/Business/Restaurateur/RestaurateurDashboard';
+import PointRelaisDashboard from './screens/Business/PointRelais/PointRelaisDashboard';
+import ExpediteurDashboard from './screens/Business/Expediteur/ExpediteurDashboard';
 
 function App() {
   return (
@@ -125,28 +129,28 @@ function App() {
         <Route path="/business/chauffeur" element={
           <CartProvider>
             <MobileFrame>
-              <CoursierDashboard />
+              <ChauffeurDashboard />
             </MobileFrame>
           </CartProvider>
         } />
         <Route path="/business/restaurateur" element={
           <CartProvider>
             <MobileFrame>
-              <CoursierDashboard />
+              <RestaurateurDashboard />
             </MobileFrame>
           </CartProvider>
         } />
         <Route path="/business/point-relais" element={
           <CartProvider>
             <MobileFrame>
-              <CoursierDashboard />
+              <PointRelaisDashboard />
             </MobileFrame>
           </CartProvider>
         } />
         <Route path="/business/expediteur" element={
           <CartProvider>
             <MobileFrame>
-              <CoursierDashboard />
+              <ExpediteurDashboard />
             </MobileFrame>
           </CartProvider>
         } />

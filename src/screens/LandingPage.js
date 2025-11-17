@@ -24,7 +24,7 @@ function LandingPage() {
             </button>
             <button
               className="cta-button"
-              style={{ background: '#f97316', color: 'white' }}
+              style={{ background: '#51B8EC', color: 'white' }}
               onClick={() => navigate('/business')}
             >
               Espace Professionnel
@@ -61,7 +61,7 @@ function LandingPage() {
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <Briefcase className="w-14 h-14 text-gray-700 mx-auto" />
+                <Briefcase className="w-14 h-14 mx-auto" style={{ color: '#51B8EC' }} />
               </div>
               <h3>AndMoov Business</h3>
               <p>Solutions complètes pour restaurateurs, commerçants, chauffeurs et livreurs. Intégration e-commerce clé en main.</p>
@@ -127,7 +127,7 @@ function LandingPage() {
             </button>
             <button
               className="cta-button-large"
-              style={{ background: '#f97316' }}
+              style={{ background: '#51B8EC' }}
               onClick={() => navigate('/business')}
             >
               Rejoindre Andmoov Business
