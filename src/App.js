@@ -14,6 +14,10 @@ import Commandes from './screens/Commandes';
 import Compte from './screens/Compte';
 import Business from './screens/Business';
 
+// Andmoov Business - Écrans professionnels
+import BusinessHome from './screens/Business/BusinessHome';
+import CoursierDashboard from './screens/Business/Coursier/CoursierDashboard';
+
 function App() {
   return (
     <Router>
@@ -94,7 +98,7 @@ function App() {
           </CartProvider>
         } />
 
-        <Route path="/business" element={
+        <Route path="/business-old" element={
           <CartProvider>
             <MobileFrame>
               <Business />
@@ -102,6 +106,14 @@ function App() {
             </MobileFrame>
           </CartProvider>
         } />
+
+        {/* Andmoov Business - Écrans professionnels (SANS MobileFrame) */}
+        <Route path="/business" element={<BusinessHome />} />
+        <Route path="/business/coursier" element={<CoursierDashboard />} />
+        <Route path="/business/chauffeur" element={<CoursierDashboard />} />
+        <Route path="/business/restaurateur" element={<CoursierDashboard />} />
+        <Route path="/business/point-relais" element={<CoursierDashboard />} />
+        <Route path="/business/expediteur" element={<CoursierDashboard />} />
       </Routes>
     </Router>
   );
